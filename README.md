@@ -13,14 +13,15 @@ All you will need to start is:
 
 * Check requirements.txt, because you need for this code two libraries: [requests](https://pypi.org/project/requests/), [urllib](https://pypi.org/project/urllib3/), and [python-dotenv](https://pypi.org/project/python-dotenv/) .
 *  Configure your enviroment (file .env)
-```
+```.env
 	API_KEY_THEYSAIDSO=YOUR_API_KEY_FROM_THEYSAIDSO
 	TELEGRAM_BOT_TOKEN=YOUR_BOT_TOKEN
 	TELEGRAM_CHAT_ID=YOUR_CHAT_ID
 ```
 
-* Use quotes.py with your own information.
-
-  
+* Use quotes.py with your own information. Example:
+```
+	python3 quotes.py
+```
 
 And that's it!!!
