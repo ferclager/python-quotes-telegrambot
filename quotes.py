@@ -1,8 +1,11 @@
 import requests
 import urllib
+from dotenv import load_dotenv
 
-TELEGRAM_BOT_TOKEN = "YOUR_TOKEN"
-TELEGRAM_CHAT_ID = "YOUR_CHAT_ID"
+load_dotenv()
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 URL_QUOTE = "https://quotes.rest/qod"
 HEADERS = {
@@ -25,7 +28,7 @@ def getQuote():
   return message
 
 def sendMessage(query):
-    r = requests.get(url = "https://api.telegram.org/bot" + TELEGRAM_BOT_TOKEN + "/sendMessage?chat_id=" + TELEGRAM_CHAT_ID + "&text=" + urllib.parse.quote(query), headers = HEADERS)
+    r = requests.get(url = f"https://api.telegram.org/bot{ TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={TELEGRAM_CHAT_ID}&text={urllib.parse.quote(query)}", headers = HEADERS)
 
 def main():
   quote = getQuote()
