@@ -30,7 +30,7 @@ def sendMessage(query):
 def main():
   quote = getQuote()
   if (quote != ''):
-    sendMessage()
+    sendMessage(quote)
 
 if __name__ == "__main__":
   main()
