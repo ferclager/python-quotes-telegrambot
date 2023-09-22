@@ -7,12 +7,13 @@ load_dotenv()
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+API_KEY_THEYSAIDSO = os.getenv("API_KEY_THEYSAIDSO")
 
 URL_QUOTE = "https://quotes.rest/qod"
 HEADERS = {
   'Accept': 'application/json',
   'Content-Type': 'application/json',
-  'X-TheySaidSo-Api-Secret': 'api_key'
+  'X-TheySaidSo-Api-Secret': API_KEY_THEYSAIDSO
 }
 
 def getQuote():
@@ -29,7 +30,7 @@ def getQuote():
   return message
 
 def sendMessage(query):
-    r = requests.get(url = f"https://api.telegram.org/bot{ TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={TELEGRAM_CHAT_ID}&text={urllib.parse.quote(query)}", headers = HEADERS)
+    r = requests.get(url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage?chat_id={TELEGRAM_CHAT_ID}&text={urllib.parse.quote(query)}", headers = HEADERS)
 
 def main():
   quote = getQuote()
