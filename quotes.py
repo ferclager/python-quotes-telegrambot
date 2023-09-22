@@ -24,9 +24,11 @@ def getQuote():
     quote = data['contents']['quotes'][0]['quote']
     author = data['contents']['quotes'][0]['author']
     permalink = data['contents']['quotes'][0]['permalink']
-    message = quote + ' (' + author + ')'
+    message = f"\"{quote}\"\n- {author}"
   elif 'error' in data:
     print("Error: " + data['error']['message'])
+  elif 'message' in data:
+    print("Error: " + data['message'])
   return message
 
 def sendMessage(query):
