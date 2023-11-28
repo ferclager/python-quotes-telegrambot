@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quotes Telegram Bot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .btn-dark-mode {
+            color: #e0e0e0;
+            background-color: #333;
+        }
+
+        .language-content {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between">
+        <button class="btn btn-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <div>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('es')">Español</button>
+        </div>
+    </div>
+
+    <!-- English Content -->
+    <div class="language-content" id="en-content">
+        <h1 class="text-center">Python Quotes Telegram Bot</h1>
+        <p>This is a Telegram bot created to send quotes using Python programming languague.</p>
+        <h2>Features:</h2>
+        <ul>
+            <li>Sends quotes using Python.</li>
+            <li>Easy to setup and use.</li>
+        </ul>
+        <h2>Setup and Usage:</h2>
+        <p>For detailed instructions on how to setup and use the bot, visit the GitHub repository:</p>
+        <a href="https://github.com/ferclager/python-quotes-telegrambot" class="btn btn-dark-mode">GitHub Repository</a>
+    </div>
+
+    <!-- Spanish Content -->
+    <div class="language-content" id="es-content">
+        <h1 class="text-center">Bot de Telegram de Citas de Python</h1>
+        <p>Este es un bot de Telegram creado para enviar citas utilizando el lenguaje de programación de Python.</p>
+        <h2>Características:</h2>
+        <ul>
+            <li>Envía citas utilizando Python.</li>
+            <li>Fácil de configurar y usar.</li>
+        </ul>
+        <h2>Configuración y Uso:</h2>
+        <p>Para obtener instrucciones detalladas sobre cómo configurar y usar el bot, visita el repositorio en GitHub:</p>
+        <a href="https://github.com/ferclager/python-quotes-telegrambot" class="btn btn-dark-mode">Repositorio en GitHub</a>
+    </div>
+</div>
+
+<script>
+    function changeLanguage(lang) {
+        document.querySelectorAll('.language-content').forEach(el => el.style.display = 'none');
+        document.getElementById(lang + '-content').style.display = 'block';
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    // Set default language to English
+    changeLanguage('en');
+</script>
+
+<!-- Optional: Bootstrap JavaScript and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
