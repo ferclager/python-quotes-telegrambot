@@ -28,12 +28,12 @@ To use the Quote Telegram Bot, follow these steps:
 * Clone the repository:
 
 ```bash
-	git clone https://github.com/your-username/pythonQuotesTelegramBot.git
+	git clone https://github.com/your-username/python-quotes-telegrambot.git
 ```
 
 * Navigate to the project directory:
 ```bash
-	cd pythonQuotesTelegramBot
+	cd python-quotes-telegrambot 
 ```
 
 * Run the quotes.py script 
