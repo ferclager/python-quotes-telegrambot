@@ -30,9 +30,9 @@ jobs:
       uses: SpicyPizza/create-envfile@v2.0
       with:
         envkey_DEBUG: false
-        API_KEY_THEYSAIDSO: ${{ THEYSAIDSO.API_KEY_THEYSAIDSO }}
-        TELEGRAM_BOT_TOKEN: ${{ THEYSAIDSO.TELEGRAM_BOT_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ THEYSAIDSO.TELEGRAM_CHAT_ID }}
+        API_KEY_THEYSAIDSO: ${{ secrets.API_KEY_THEYSAIDSO }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         file_name: .env
         fail_on_empty: false
         sort_keys: false
