@@ -9,9 +9,6 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 API_KEY_THEYSAIDSO = os.getenv("API_KEY_THEYSAIDSO")
 
-print("DELETEME '" + TELEGRAM_CHAT_ID + "'")
-print("DELETEME '" + TELEGRAM_BOT_TOKEN + "'")
-
 URL_QUOTE = "https://quotes.rest/qod"
 HEADERS = {
   'Accept': 'application/json',
