@@ -10,6 +10,7 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 API_KEY_THEYSAIDSO = os.getenv("API_KEY_THEYSAIDSO")
 
 print("DELETEME '" + TELEGRAM_CHAT_ID + "'")
+print("DELETEME '" + TELEGRAM_BOT_TOKEN + "'")
 
 URL_QUOTE = "https://quotes.rest/qod"
 HEADERS = {
