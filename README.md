@@ -9,7 +9,7 @@ Before you begin, make sure you have the following:
 
 * **Telegram Bot**: Create a Telegram bot by following the instructions [here](https://core.telegram.org/bots).
 
-* **Telegram Chat ID**: Obtain the chat ID from your bot. Refer to [this guide](https://core.telegram.org/bots#3-how-do-i-create-a-bot) for more information.
+* **Telegram Chat ID**: Obtain the chat ID from your bot. Refer to [this guide](https://core.telegram.org/bots#3-how-do-i-create-a-bot) for more information. Also you can GET it from https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates, and see more recent chats.
 
 * **Quotes API from They Said So®**: Sign up for the They Said So® API to get access to the quotes. You can make 10 free calls per hour. Visit [here](https://theysaidso.com/api/) to get your API key.
 
@@ -28,7 +28,7 @@ To use the Quote Telegram Bot, follow these steps:
 * Clone the repository:
 
 ```bash
-	git clone https://github.com/your-username/python-quotes-telegrambot.git
+	git clone git@github.com:ferclager/python-quotes-telegrambot.git
 ```
 
 * Navigate to the project directory:
@@ -40,6 +40,22 @@ To use the Quote Telegram Bot, follow these steps:
 ``` bash
 	python3 quotes.py
 ```
+
+If you have an issue like this one:
+```bash
+	python3 quotes.py
+	Traceback (most recent call last):
+	File "/Users/ferclager/Developer/python-quotes-telegrambot/quotes.py", line 2, in <module>
+		import requests
+	ModuleNotFoundError: No module named 'requests'
+```
+
+It means that you need to run this command first, to get al requirements from requirements.txt
+```bash
+	pip install -r requirements.txt
+```
+Note: make sure that you have pip installed first.
+
 
 That's it! The bot will fetch quotes from the They Said So® API and send them to the specified Telegram chat.
 
