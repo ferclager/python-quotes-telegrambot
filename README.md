@@ -43,14 +43,13 @@ To use the Quote Telegram Bot, follow these steps:
 
 If you have an issue like this one:
 ```bash
-	python3 quotes.py
 	Traceback (most recent call last):
 	File "/Users/ferclager/Developer/python-quotes-telegrambot/quotes.py", line 2, in <module>
 		import requests
 	ModuleNotFoundError: No module named 'requests'
 ```
 
-It means that you need to run this command first, to get al requirements from requirements.txt
+It means that you need to run this command first, to get all requirements from requirements.txt
 ```bash
 	pip install -r requirements.txt
 ```
