@@ -37,7 +37,7 @@ To use the Quote Telegram Bot, follow these steps:
 ```
 
 * Run the quotes.py script 
-``` bash
+```bash
 	python3 quotes.py
 ```
 
